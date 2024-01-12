@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -18,9 +18,11 @@ var specialCharactersArray = "!@#$%^&*()".split("");
 
 // goal is to get randomly generated string as return of generate password function. 
 // create pools of potential characters in array
-var characterPool = [];
-var finalPassword = [];
+
 function generatePassword(){
+  var finalPassword = [];
+  var characterPool = [];
+
 var length = prompt("How long would you like your password to be?");
 if (length < 8){
   var length = prompt("Please enter a value of 8 or higher");
